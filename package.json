@@ -1,36 +1,25 @@
 {
-    "title": "1 Col Portfolio",
-    "name": "startbootstrap-1-col-portfolio",
-    "version": "4.0.0",
-    "description": "A one column portfolio HTML template built with Bootstrap",
-    "keywords": [
-        "css",
-        "sass",
-        "html",
-        "responsive",
-        "theme",
-        "template"
-    ],
-    "homepage": "https://startbootstrap.com/template-overviews/1-col-portfolio",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/issues",
-        "email": "feedback@startbootstrap.com"
-    },
-    "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio.git"
-    },
-    "dependencies": {
-        "bootstrap": "4.0.0",
-        "jquery": "3.3.1"
-    },
-    "devDependencies": {
-        "browser-sync": "2.23.6",
-        "gulp": "^3.9.1"
-    }
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "[1 Col Portfolio](https://startbootstrap.com/template-overviews/1-col-portfolio/) is a single column portfolio layout template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiawenZhu/my-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JiawenZhu/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/JiawenZhu/my-portfolio#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "npm": "^5.7.1"
+  }
 }
