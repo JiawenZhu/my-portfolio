@@ -7,9 +7,11 @@ app.get('/', function (req, res){
 	res.render('index');
 	// res.send('<h1> This is jiawen home page </h1>');
 });
-
 app.get('/about', function(req,res){
 	res.render('about');
+});
+app.get('/contact', function(req,res){
+	res.render('contact');
 });
 app.listen(process.env.PORT || 3000, function(){
 	console.log("listen to port 3000");
