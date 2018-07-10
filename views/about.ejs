@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.csss" rel="stylesheet">
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
   rel="stylesheet">
+  <script> 
+      $(function(){
+        $("#header").load("header"); 
+        $("#footer").load("footer"); 
+      });
+    </script>
   <style>
     .fa-linkedin { background: #007bb5; color: white;}
     .fa-github {background: #333333; color: white;}
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
   </style>
 </head>
-
+<div id="header"></div>
 <body>
 
 <div class="container-fluid bg-1 text-center">
@@ -25,21 +42,17 @@
     
      <p>For my professional life, I worked with a PHD professor to help the students to improve their knowledge in a software development class. In the end, the students, successfully, were able to build many interesting applications with java including Parser, Compiler, and a game we designed in Java OOP.  I was very happy to help many students with different skills sets which also brought the joy of working with different people; with different backgrounds and knowledge.   I think I will be a great fit for the company since I have worked with people from all over the world. It’s been fascinating. this past year, I have worked with people from Vietnam, Russian, Korean and China. Finally, I’m looking forward to contributing my knowledge and energy to meet our company goals.</font>
     </h3>
-  <p1>
-  	
-  </p1>
 </div>
 </body>
 <!-- footer -->
 
 <!--Footer-->
 <footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
-  <a type="button" href= "https://www.linkedin.com/in/zhu-jiawen-1b166430/" class="fa-linkedin"></i> Linkedin</a>
-
-  <a type="button" href="https://github.com/JiawenZhu" class="fa-github"></i> Github</a>
-
+    <a type="button" href= "https://www.linkedin.com/in/zhu-jiawen-1b166430/" class="fa-linkedin"></i> Linkedin
+    </a>
+    <a type="button" href="https://github.com/JiawenZhu" class="fa-github"></i> Github
+    </a>
 </footer>
-<!--/.Footer-->
+<div id=footer></div>
                       
-
 </html>
