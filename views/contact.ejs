@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -36,6 +37,7 @@ input[type=submit]:hover {
 }
 </style>
 </head>
+<div id="header"></div>
 <body>
 
 <h3>Contact Form</h3>
@@ -63,6 +65,12 @@ input[type=submit]:hover {
 		<input type="submit" value="Submit">
 </form>
 </div>
-
 </body>
+<div id="footer"></div>
+<script> 
+		$(function(){
+			$("#header").load("header"); 
+			$("#footer").load("footer"); 
+		});
+</script>
 </html>
