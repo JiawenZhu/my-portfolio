@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/contact -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="./Jiawen Zhu projects_files/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+</head>
+<body cz-shortcut-listen="true" style="background-color: cadetblue;">
+    <div id="header">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="./Jiawen Zhu projects_files/jquery.min.js"></script>
+    
+    <title>Jiawen Zhu projects</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Jiawen Zhu projects_files/bootstrap.min.js" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Jiawen Zhu projects_files/bootstrap.min.css" rel="stylesheet">
+     
+    <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container" style="
+    background-color:  black;
+">
+        <a class="navbar-brand" href="http://localhost:3000/contact#">Welcome to My projects site</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive" style="
+    background-color: lightseagreen;
+">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+              <a class="nav-link" href="http://localhost:3000/">Home</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="http://localhost:3000/about">About</a></li>
+              <li class="nav-item">
+              <a class="nav-link" href="http://localhost:3000/contact">Contact</a>
+              </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</div>
+
+
+<h3>Contact Form</h3>
+
+<div class="container">
+  <form action="https://formspree.io/zhujiawen519@gmail.com" method="POST">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label> 
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+			<option value="usa" selected="">USA</option>
+			<option value="usa">China</option>
+		</select>
+		<label for="subject">email</label>
+		<input type="email" name="_replyto"><br>
+    <textarea type="text" name="message" placeholder="What would like to tell... :)" style="height:200px"></textarea>
+
+		<input type="submit" value="Submit">
+</form>
+</div>
+
+<div id="footer">
+    
+        <script src="./Jiawen Zhu projects_files/jquery.min.js">
+        </script>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+    
+    <footer class="py-5 bg-dark" ,="">
+        <div class="container" style="
+    background-color:  black;
+">
+            <p class="m-0 text-center text-white" style="
+    background: black;
+">Copyright © My projects 2018</p>
+        </div>
+    </footer>
+
+  
+</div>
+<script> 
+		$(function(){
+			$("#header").load("header"); 
+			$("#footer").load("footer"); 
+		});
+</script>
+
+</body></html>
