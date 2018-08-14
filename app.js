@@ -19,9 +19,6 @@ app.get('/header', function(req,res){
 app.get('/footer', function(req,res){
 	res.render('footer');
 });
-app.get('/payment', function(req,res){
-	res.render('payment')
-});
 app.listen(process.env.PORT || 3000, function(){
 	console.log("listen to port 3000");
 });
