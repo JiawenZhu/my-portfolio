@@ -22,6 +22,6 @@ app.get('/footer', function(req,res){
 app.get('/payment', function(req,res){
 	res.render('payment');
 })
-app.listen(process.env.PORT || 3008, function(){
-	console.log("listen to port 3008");
+app.listen(process.env.PORT || 3009, function(){
+	console.log("listen to port 3009");
 });

@@ -40,25 +40,44 @@ input[type=submit]:hover {
 <div id="header"></div>
 <body>
 
-<h3>Contact Form</h3>
+<pre><h3>留下<font size="15">您</font>的<br/>&nbsp&nbsp&nbsp信息和<font>问题</font></h3></pre>
 
 <div class="container">
   <form action= "https://formspree.io/zhujiawen519@gmail.com"
 	method="POST">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="您的 &nbsp 姓名">
 
-    <label for="lname">Last Name</label> 
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <label for="email">Email </label> 
+    <input type="text" id="email" name="email" placeholder="您的 &nbsp Email">
 
     <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-			<option value="usa" selected>USA</option>
-			<option value="usa">China</option>
-		</select>
-    <textarea type="text" name="message" placeholder="What would like to tell... :)" style="height:200px"></textarea>
+    <select id="country" name="country" onchange="selectCountry(value)">
+        <option value="korean">한국</option>
+        <option value="canada">Canada</option>
+        <option value="usa" >USA</option>
+        <option value="china" selected>中国</option>
+    </select>
+    <script>
+        function selectCountry(countryName){
+            if (countryName=="korean"){
+                document.getElementById('message').placeholder = "니가 필요한 걸 말해줘...";
+                document.getElementById('fname').placeholder = "이름";
+                document.getElementById('email').placeholder = "귀하의 이메일";
+            }
+            else if(countryName=="china"){
+                document.getElementById('message').placeholder = "告诉我你的需求...";
+                document.getElementById('fname').placeholder = "您的 姓名";
+                document.getElementById('email').placeholder = "您的 Email";
+            }else{
+                document.getElementById('message').placeholder = "tell me what you need...";
+                document.getElementById('fname').placeholder = "name";
+                document.getElementById('email').placeholder = "email ";
+            }
+            console.log(countryName);
+        }
+    </script>
+    <textarea id= "message" type="text" name="message" placeholder="您想告诉我的..." style="height:200px"></textarea>
 
 		<input type="submit" value="Submit">
 </form>

@@ -1,57 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-
+    <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-    <script> 
-      $(function(){
-        $("#header").load("header"); 
-        $("#footer").load("footer"); 
-      });
-    </script>
-    <title>Jiawen Zhu projects</title>
+    
+  <script          src="https://www.paypalobjects.com/api/checkout.js"></script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
 
-    <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" rel="stylesheet">
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
 
-    <!-- Custom styles for this template -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <div id="header"></div>
-  <body>
-    <!-- Page Content -->
-    <div class="container", style="padding-left: 20px; padding-top: 50px">
-        <!-- Page Heading -->
-        <h3 class="my-4">
-            <small>chat application</small>
-        </h3>
-        <!-- Project One -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ry26xM9stJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <!-- /.row -->
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-        <hr>
-        <h3 class="my-4">
-            <small>stock game</small>
-        </h3>
-        <!-- Project Two -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/N5neqOorc94" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <!-- /.row -->
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
 
-        <h4 class="my-4">
-          <small> my facebook shared video</small>
-        </h4>
-          <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFirstMediaBlossom%2Fvideos%2F10155742161654586%2F&show_text=0&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-        <hr>
-    </div>
-    <div id="paypal-button-container"></div>
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    </style>
+        <title>Jiawen Zhu projects</title>
+    </head>
+    <div id="header"></div>
+    <body>
+        <!-- Page Content -->
+        <div class="container", style="padding-left: 20px; padding-top: 50px">
+            <!-- Page Heading -->
+            <h3 class="my-4">
+                <small>chat application</small>
+            </h3>
+            <!-- Project One -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ry26xM9stJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <hr>
 
-       <!-- paypal button  -->
+            <h3 class="my-4">
+                <small>stock game</small>
+            </h3>
+            <!-- Project Two -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N5neqOorc94" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <hr>
+
+
+            <h4 class="my-4">
+            <small> my facebook shared video</small>
+            </h4>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFirstMediaBlossom%2Fvideos%2F10155742161654586%2F&show_text=0&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+            <hr>
+            <h5 class="my-4">
+                <small> my linkedin shared video</small>
+            </h5>
+            <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6422879999338123264" height="568" width="504" frameborder="0" allowfullscreen=""></iframe>
+            <div id="paypal-button-container"></div>
+        </div>
+        
     <script>
         paypal.Button.render({
 
@@ -95,12 +118,12 @@
 
     </script>
   </body>
-  <footer>
-    <div id="footer"></div>
-  </footer>
-  
+  <div id="footer"></div>
+  <script> 
+    $(function(){
+        $("#header").load("header"); 
+        $("#footer").load("footer"); 
+    });
+  </script>
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 </html>
