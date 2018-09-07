@@ -7,45 +7,7 @@
 
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
   rel="stylesheet">
-  <style>
-      body {font-family: Arial, Helvetica, sans-serif;}
-      
-      input[type=text], select, textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-          margin-top: 6px;
-          margin-bottom: 16px;
-          resize: vertical;
-      }
-      
-      input[type=submit] {
-          background-color: #4CAF50;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-      }
-      
-      input[type=submit]:hover {
-          background-color: #45a049;
-      }
-      
-      .container {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
-      }
-  </style>
-  <script> 
-      $(function(){
-        $("#header").load("header"); 
-        $("#footer").load("footer"); 
-      });
-    </script>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     .fa-linkedin { background: #007bb5; color: white;}
     .fa-github {background: #333333; color: white;}
@@ -64,8 +26,9 @@
       font-size: 150%;
       padding-top: 3%;
       padding-inline-end: 15%;
-      padding-left: 35%;
+      padding-left: 30%;
       padding-right: 35%;
+      background-image: image("https://image.ibb.co/eHRpSz/iphoneX.jpg");
     }
   </style>
 </head>
@@ -75,7 +38,7 @@
 <div class="container-fluid bg-1">
   <h3 style="padding-left: 43%"><font color="gray">Who Am I?</font></h3>
 </div>
-
+<a href="https://imgbb.com/"><img src="https://image.ibb.co/eHRpSz/iphoneX.jpg" alt="iphoneX" border="0" width="30%" height="auto" style="padding-left: 30%"/></a>
 <div class="container-fluid bg-2 text-center">
   <p class= "paragraph1">To Whom it may concern:
     My name is Jiawen Zhu, a graduate of San Francisco State University with a GPA of 3.45. I can work full time since I have finished my schooling.<br/><br/>
@@ -94,5 +57,11 @@
 
 <!--Footer-->
 <div id=footer></div>
-                      
+<script> 
+    $(function(){
+      $("#header").load("header"); 
+      $("#footer").load("footer"); 
+    });
+    
+  </script>
 </html>

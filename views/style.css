@@ -1,0 +1,20 @@
+.fa-linkedin { background: #007bb5; color: white;}
+.fa-github {background: #333333; color: white;}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;           
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 36px;
+}
+.paragraph1{
+  text-align: left;
+  font-size: 150%;
+  padding-top: 3%;
+  padding-inline-end: 15%;
+  padding-left: 30%;
+  padding-right: 35%;
+}

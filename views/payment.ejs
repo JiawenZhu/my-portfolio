@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </head>
-
 <body>
+    <div id="header"></div>
+    <div style="text-align: center">
+    <p style="color: red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">donate me one dollor to keep my site alive</p>
     <div id="paypal-button-container"></div>
-
+    </div>
     <script>
         paypal.Button.render({
 
@@ -33,7 +35,7 @@
                     payment: {
                         transactions: [
                             {
-                                amount: { total: '0.01', currency: 'USD' }
+                                amount: { total: '1', currency: 'USD' }
                             }
                         ]
                     }
@@ -53,4 +55,10 @@
 
     </script>
 </body>
+<script> 
+    $(function(){
+        $("#header").load("header"); 
+        $("#footer").load("footer"); 
+    });
+</script>
     

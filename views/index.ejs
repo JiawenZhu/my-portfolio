@@ -10,7 +10,6 @@
   <script          src="https://www.paypalobjects.com/api/checkout.js"></script>
   <style>
     body {font-family: Arial, Helvetica, sans-serif;}
-
     input[type=text], select, textarea {
         width: 100%;
         padding: 12px;
@@ -21,7 +20,6 @@
         margin-bottom: 16px;
         resize: vertical;
     }
-
     input[type=submit] {
         background-color: #4CAF50;
         color: white;
@@ -30,15 +28,14 @@
         border-radius: 4px;
         cursor: pointer;
     }
-
     input[type=submit]:hover {
         background-color: #45a049;
     }
-
     .container {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
+        border-radius: 0px;
+        background-color: rgb(65, 93, 100);
+        padding: 200px;
+        opacity: 0.9;
     }
     </style>
         <title>Jiawen Zhu projects</title>
@@ -46,16 +43,16 @@
     <div id="header"></div>
     <body>
         <!-- Page Content -->
-        <div class="container", style="padding-left: 20px; padding-top: 50px">
+        <div class="container", style="padding-left: 20%; padding-right: 30%; padding-top: 50px">
             <!-- Page Heading -->
-            <h3 class="my-4">
+            <h3 style="color: #FFBC32;">
                 <small>chat application</small>
             </h3>
             <!-- Project One -->
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ry26xM9stJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             <hr>
 
-            <h3 class="my-4">
+            <h3 style="color:#FFBC32;">
                 <small>stock game</small>
             </h3>
             <!-- Project Two -->
@@ -63,12 +60,12 @@
             <hr>
 
 
-            <h4 class="my-4">
+            <h4 style="color:#FFBC32;">
             <small> my facebook shared video</small>
             </h4>
             <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFirstMediaBlossom%2Fvideos%2F10155742161654586%2F&show_text=0&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
             <hr>
-            <h5 class="my-4">
+            <h5 style="color:#FFBC32;">
                 <small> my linkedin shared video</small>
             </h5>
             <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6422879999338123264" height="568" width="504" frameborder="0" allowfullscreen=""></iframe>
@@ -77,22 +74,17 @@
         
     <script>
         paypal.Button.render({
-
             env: 'sandbox', // sandbox | production
-
             // PayPal Client IDs - replace with your own
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
             client: {
                 sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
                 production: '<insert production client id>'
             },
-
             // Show the buyer a 'Pay Now' button in the checkout flow
             commit: true,
-
             // payment() is called when the button is clicked
             payment: function(data, actions) {
-
                 // Make a call to the REST api to create the payment
                 return actions.payment.create({
                     payment: {
@@ -104,18 +96,14 @@
                     }
                 });
             },
-
             // onAuthorize() is called when the buyer approves the payment
             onAuthorize: function(data, actions) {
-
                 // Make a call to the REST api to execute the payment
                 return actions.payment.execute().then(function() {
                     window.alert('Payment Complete!');
                 });
             }
-
         }, '#paypal-button-container');
-
     </script>
   </body>
   <div id="footer"></div>
