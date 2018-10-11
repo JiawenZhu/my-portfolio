@@ -11,11 +11,15 @@
     <div style="text-align: center">
     <p style="color: red; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">donate me one dollor to keep my site alive</p>
     <div id="paypal-button-container"></div>
+    <div style="padding: 50px ">
+        <button onclick="backHomePage()"><strong>back</strong></button>
     </div>
-    <script>
+    </div>
+</body>
+<script>
         paypal.Button.render({
 
-            env: 'sandbox', // sandbox | production
+            env: 'production', // sandbox | production
 
             // PayPal Client IDs - replace with your own
             // Create a PayPal app: https://developer.paypal.com/developer/applications/create
@@ -54,8 +58,10 @@
         }, '#paypal-button-container');
 
     </script>
-</body>
 <script> 
+    function backHomePage(){
+        window.location.href='/';
+    }
     $(function(){
         $("#header").load("header"); 
         $("#footer").load("footer"); 

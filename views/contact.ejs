@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -38,56 +38,84 @@ input[type=submit]:hover {
 </style>
 </head>
 <div id="header"></div>
-<body>
+<body style="background-color: lightgray">
+        <pre class='title'><h3>Leave me<font size="15">Your</font><br/>&nbsp&nbsp&nbsp messages and <font>questions</font></h3></pre>
 
-<pre><h3>留下<font size="15">您</font>的<br/>&nbsp&nbsp&nbsp信息和<font>问题</font></h3></pre>
-
-<div class="container">
-  <form action= "https://formspree.io/zhujiawen519@gmail.com"
-	method="POST">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="您的 &nbsp 姓名">
-
-    <label for="email">Email </label> 
-    <input type="text" id="email" name="email" placeholder="您的 &nbsp Email">
-
-    <label for="country">Country</label>
-    <select id="country" name="country" onchange="selectCountry(value)">
-        <option value="korean">한국</option>
-        <option value="canada">Canada</option>
-        <option value="usa" >USA</option>
-        <option value="china" selected>中国</option>
-    </select>
-    <script>
-        function selectCountry(countryName){
-            if (countryName=="korean"){
-                document.getElementById('message').placeholder = "니가 필요한 걸 말해줘...";
-                document.getElementById('fname').placeholder = "이름";
-                document.getElementById('email').placeholder = "귀하의 이메일";
-            }
-            else if(countryName=="china"){
-                document.getElementById('message').placeholder = "告诉我你的需求...";
-                document.getElementById('fname').placeholder = "您的 姓名";
-                document.getElementById('email').placeholder = "您的 Email";
-            }else{
-                document.getElementById('message').placeholder = "tell me what you need...";
-                document.getElementById('fname').placeholder = "full name";
-                document.getElementById('email').placeholder = "email ";
-            }
-            console.log(countryName);
-        }
-    </script>
-    <textarea id= "message" type="text" name="message" placeholder="您想告诉我的..." style="height:200px"></textarea>
-
-		<input type="submit" value="Submit">
-</form>
-</div>
+        <div class="container">
+          <form action='/formSubmition' method='GET'>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="first name" required>
+        
+            <label for="email">Email </label> 
+            <input type="text" id="email" name="email" placeholder="email" required>
+        
+            <label for="country">Country</label>
+            <select id="country" name="country" onchange="selectCountry(value)">
+                <option value="korean">한국</option>
+                <option value="canada">Canada</option>
+                <option value="usa" selected>USA</option>
+                <option value="china">中国</option>
+            </select>
+            <script>
+                function selectCountry(countryName){
+                    if (countryName=="korean"){
+                        document.getElementById('message').placeholder = "니가 필요한 걸 말해줘...";
+                        document.getElementById('fname').placeholder = "이름";
+                        document.getElementById('email').placeholder = "귀하의 이메일";
+                    }
+                    else if(countryName=="china"){
+                        document.getElementById('message').placeholder = "告诉我你的需求...";
+                        document.getElementById('fname').placeholder = "您的 姓名";
+                        document.getElementById('email').placeholder = "您的 Email";
+                    }else{
+                        document.getElementById('message').placeholder = "tell me what you need...";
+                        document.getElementById('fname').placeholder = "first name";
+                        document.getElementById('email').placeholder = "email ";
+                    }
+                    console.log(countryName);
+                }
+            </script>
+            <textarea id= "message" type="text" name="message" style="height:200px" placeholder="tell me what you need..."></textarea>
+        
+                <input type="submit" value="Submit">
+        </form>
+        </div>
+        
 </body>
 <div id="footer"></div>
+<style> 
+  img {
+      position: relative;
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+      -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+      animation-name: example;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+  }
+  
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes example {
+      0%   {left:0px; top:0px;}
+      25%  {left:200px; top:0px;}
+      50%  {left:200px; top:200px;}
+      75%  {left:0px; top:200px;}
+      100% {left:0px; top:0px;}
+  }
+  
+  /* Standard syntax */
+  @keyframes example {
+      0%   {left:0px; top:0px;transform: rotate(90deg)}
+      25%  {left:200px; top:0px;}
+      50%  {left:200px; top:200px;transform: rotate(-90deg)}
+      75%  {left:0px; top:200px;}
+      100% {left:0px; top:0px;}
+  }
+  </style> 
 <script> 
-		$(function(){
-			$("#header").load("header"); 
-			$("#footer").load("footer"); 
-		});
+    $(function(){
+        $("#header").load("header"); 
+        $("#footer").load("footer"); 
+      });   
 </script>
 </html>
