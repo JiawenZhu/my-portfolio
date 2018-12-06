@@ -5,6 +5,8 @@ const express = require('express');
 
 const app = express();
 
+var JSAlert = require("js-alert");
+
 app.set('view engine', 'ejs');
 app.get('/', function (req, res){
 	res.render('index');
@@ -47,14 +49,24 @@ function sendToDatabase(name, email, country, message){
 
 	con.connect(function(err) {
 		if (err) throw err;
-		console.log("Connected!");
-		var sql = "INSERT INTO customer (name, email, country, message) VALUES ('"+name+"', '"+email+"', '"+country+"', '"+message+"')";
-		con.query(sql, function (err, result) {
-			if (err) throw err;
-			console.log("1 record inserted");
-		});
+		console.log("database Connected!");
+		var dupEmail = "SELECT * from customer where email='"+email+"'";
+		con.query(dupEmail, function (err, result) {
+			if (result.length != 0) {
+				console.log("email has been taken!");
+			}
+			else{
+				var sql = "INSERT INTO customer (name, email, country, message) VALUES ('"+name+"', '"+email+"', '"+country+"', '"+message+"')";
+				con.query(sql, function(err, result){
+					if(err) throw err
+					else 
+						console.log("1 record inserted");
+				});
+			}
+		});	
+	
 	});
 }
-app.listen(process.env.PORT || 3009, function(){
-	console.log("listen to port 3009");
+app.listen(process.env.PORT || 8080, function(){
+	console.log("listen to port 8080");
 });

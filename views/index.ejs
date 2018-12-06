@@ -36,11 +36,6 @@
         background-color: #f2f2f2;
         padding: 20px;
     }
-    .resp-iframe {
-        width: 55%;
-        border: 2px;
-    }
-
     </style>
         <title>Jiawen Zhu projects</title>
     </head>
@@ -55,17 +50,15 @@
             </h3>
             <!-- Project One -->
                 <div class="row">
-                    <!-- <div class="col-lg-10"> -->
-                    <iframe class="resp-iframe" width="560" height="315" src="https://www.youtube.com/embed/ry26xM9stJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                   <!-- </div> -->
-                <div class="col-lg-1"></div>
-                <div class="col-lg-3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ry26xM9stJ8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen allowTransparency="true" style="border:none;overflow:hidden"></iframe>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-3">
                        <p1>this application is written in <strong>java</strong>
                         to create a <strong>UI</strong>, I used java swing
                        user can not only<strong> send message</strong>, but also send large files and <strong>photos</strong>
                        users can play a hidden securite game</p1>
+                    </div>
                 </div>
-            </div>
             <hr>
 
             <h3 class="my-4">
@@ -73,7 +66,7 @@
             </h3>
             <!-- Project Two -->
             <div class="row">
-                <iframe class="resp-iframe" width="560" height="315" src="https://www.youtube.com/embed/N5neqOorc94" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/N5neqOorc94" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-3">
                         <p1 >this is a practical application that let user practice buying and selling stocks on the market<br>
@@ -88,7 +81,7 @@
             <small> my facebook shared video</small>
             </h4>
             <div class="row">
-            <iframe class="resp-iframe" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFirstMediaBlossom%2Fvideos%2F10155742161654586%2F&show_text=0&width=476" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FFirstMediaBlossom%2Fvideos%2F10155742161654586%2F&show_text=0&width=476" width="560" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
             <div class="col-lg-1"></div>
                 <div class="col-lg-3">
                         <p1>this is one of my favourite facebook video
@@ -100,7 +93,7 @@
                 <small> my linkedin shared video</small>
             </h5>
             <div class="row">
-                <iframe class="resp-iframe" src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6422879999338123264" height="568" width="504" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6422879999338123264" width="560" height="400r" frameborder="0" allowfullscreen=""></iframe>
             <div class="col-lg-1"></div>
                 <div class="col-lg-3">
                         <p1>this is a great Linkedin video that teach you how to use<strong> excel</strong>!</p1>
@@ -108,40 +101,6 @@
             </div>
         </div>
     </div>
-        
-    <script>
-        paypal.Button.render({
-            env: 'sandbox', // sandbox | production
-            // PayPal Client IDs - replace with your own
-            // Create a PayPal app: https://developer.paypal.com/developer/applications/create
-            client: {
-                sandbox:    'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
-                production: '<insert production client id>'
-            },
-            // Show the buyer a 'Pay Now' button in the checkout flow
-            commit: true,
-            // payment() is called when the button is clicked
-            payment: function(data, actions) {
-                // Make a call to the REST api to create the payment
-                return actions.payment.create({
-                    payment: {
-                        transactions: [
-                            {
-                                amount: { total: '0.01', currency: 'USD' }
-                            }
-                        ]
-                    }
-                });
-            },
-            // onAuthorize() is called when the buyer approves the payment
-            onAuthorize: function(data, actions) {
-                // Make a call to the REST api to execute the payment
-                return actions.payment.execute().then(function() {
-                    window.alert('Payment Complete!');
-                });
-            }
-        }, '#paypal-button-container');
-    </script>
   </body>
   <div id="footer"></div>
   <script> 
