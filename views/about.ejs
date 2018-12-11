@@ -31,9 +31,8 @@
     }
   </style>
 </head>
-<div id="header"></div>
 <body>
-
+  <%- include('header.ejs') %>
 <div class="container" class="container-fluid bg-1">
   <h3 style="text-align: center"><font color="gray">Who Am I?</font></h3>
   <a href="https://imgbb.com/"><img src="https://image.ibb.co/fGdM8p/profile.png" alt="profile" width="30%" height="30%"></a><br/>
@@ -54,12 +53,6 @@
 </a>
 <a type="button" href="https://github.com/JiawenZhu" class="fa-github"></i> Github
 </a>
+<%- include('footer.ejs') %>
 </body>
-<div id="footer"></div>
-  <script> 
-      $(function(){
-        $("#header").load("header"); 
-        $("#footer").load("footer"); 
-      });   
-  </script>
 </html>
